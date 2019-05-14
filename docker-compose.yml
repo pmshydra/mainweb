@@ -4,10 +4,17 @@ services:
     image: hydragaming/mainweb
     container_name: Main_Web
     hostname: mainweb
+    privileged: true
     restart: unless-stopped
     volumes:
-      - /home/matt/docker/first/var:/var
-      - /home/matt/docker/first/etc:/etc"
+      - mainweb:/var/www/html
+      - mainwebconfig:/etc
+      - 
     ports:
       - 72:72
-      - 8675:80
+    cap_add:
+      - ALL
+volumes:
+  mainweb: {}
+  mainwebconfig: {}
+  mainweb: {}
