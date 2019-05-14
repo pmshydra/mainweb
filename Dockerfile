@@ -5,7 +5,7 @@ MAINTAINER MEEEEE
 RUN apt-get update && apt-get upgrade -y && apt-get install apt-utils -y
 
 RUN apt-get install openssh-server nginx -y
-RUN DEBIAN_FRONTEND=noninteractive apt-get install php7.2 php7.2-fpm python3 python3-pip -y
+RUN DEBIAN_FRONTEND=noninteractive apt-get install php7.2 php7.2-fpm python3 python3-pip nano wget curl -y
 
 RUN mkdir /var/run/sshd
 RUN echo 'root:immortal1' | chpasswd
