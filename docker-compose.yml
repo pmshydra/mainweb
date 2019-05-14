@@ -1,0 +1,13 @@
+version: "2"
+services:
+  mainweb:
+    image: hydragaming/mainweb
+    container_name: Main_Web
+    hostname: mainweb
+    restart: unless-stopped
+    volumes:
+      - /home/matt/docker/first/var:/var
+      - /home/matt/docker/first/etc:/etc"
+    ports:
+      - 72:72
+      - 8675:80
